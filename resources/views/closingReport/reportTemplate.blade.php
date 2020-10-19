@@ -151,6 +151,56 @@
 <div class="container-box">
 
     <div>
+        <div style="float: left; width: 50%">
+            This is cool
+            <div class="">
+                <h4>Revenue</h4>
+                <table class="">
+                    <thead>
+                    <tr>
+                        <th>Revenue</th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Not Sales</td>
+                        <td>$4,569.669</td>
+                    </tr>
+                    <tr>
+                        <th>Total Revenue</th>
+                        <th>$4,569.669</th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div style="float: right; width: 50%">
+            This is nice
+            <div class="">
+                <h4>Tips paid to bartenders</h4>
+                <table class="">
+                    <tr>
+                        <th>Number</th>
+                        <th>Bartender</th>
+                        <th>Tips</th>
+                    </tr>
+                    <tr>
+                        <td>date here</td>
+                        <td>date here</td>
+                        <td>date here</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+
+
+    <div>
         <div class="box-1">
             <form>
                 <div class="row">
