@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/employee/pdf','App\Http\Controllers\SampleController@showExportReport');
+
+Route::get('/','App\Http\Controllers\SampleController@showExportReport');
 Route::get('/sendmail/pdf','App\Http\Controllers\SampleController@sendPDFFile')->name("sendMail");
