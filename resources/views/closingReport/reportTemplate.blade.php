@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PDF Demo in Laravel 7</title>
 
-    <style>
-        * {
+    <style type="text/css">
+       /* *, ::after, ::before {
             box-sizing: border-box;
-        }
+        } */
 
         input[type="text"] {
             width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            resize: vertical;
+
         }
 
         input[type="date"] {
@@ -32,15 +32,16 @@
             font-weight: bolder;
         }
 
-        .col-25 {
-            float: left;
-            width: 25%;
-            margin-top: 6px;
+        .col-2 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
         }
 
-        .col-75 {
-            float: left;
-            width: 75%;
+        .col-10 {
+            float: right;
+            width: 60%;
             margin-top: 6px;
         }
 
@@ -52,24 +53,30 @@
         .clear {
             clear: both;
         }
+
         .box-1 {
-            width: 48%;
+            width: 40%;
             float: left;
-            margin-bottom: 30px;
         }
 
         .box-2 {
-            width: 48%;
+            width: 40%;
             float: right;
-            margin-bottom: 30px;
         }
-        .container {
-            padding: 90px;
+
+        .box-left{
+            display: inline;
         }
+        .box-right{
+            float: left;
+            width: 45%;
+
+        }
+
+
         img {
             width: 150px;
             height: 120px;
-            align-content: center;
         }
 
         table,
@@ -116,13 +123,14 @@
         }
 
         .in-put-wrap {
-            display: flex;
+            display: inline-block;
             flex-direction: row;
+            margin-bottom: 20px;
         }
         .in-box1,
         .in-box2,
         .in-box3 {
-            width: 33.3%;
+            width: 30.3%;
         }
 
         .in-box4 {
@@ -131,100 +139,117 @@
         .in-box5 {
             margin: 20px;
         }
+        .form-item{
+            margin-bottom: 1rem;
+        }
     </style>
 
 </head>
 
 <body>
 
-<div class="container">
-    <div class="box-1">
-        <form>
-            <div class="row">
-                <div class="col-25">
-                    <label for="name">Pallirra #</label>
-                </div>
-                <div class="col-75">
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Your name.."
-                    />
-                </div>
-            </div>
+<div class="container-box">
 
-            <div class="row">
-                <div class="col-25">
-                    <label for="date">Date</label>
+    <div>
+        <div class="box-1">
+            <form>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="name">Pallirra #</label>
+                    </div>
+                    <div class="col-10">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name.."
+                        />
+                    </div>
                 </div>
-                <div class="col-75">
-                    <input type="date" id="date" name="date" />
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-25">
-                    <label for="managerName">Manager name</label>
+                <div class="row">
+                    <div class="col-2">
+                        <label for="date">Date</label>
+                    </div>
+                    <div class="col-10">
+                        <input type="date" id="date" name="date" />
+                    </div>
                 </div>
-                <div class="col-75">
-                    <input
-                        type="text"
-                        id=""
-                        name="managerName"
-                        placeholder="Your manager name"
-                    />
+
+                <div class="row">
+                    <div class="col-2">
+                        <label for="managerName">Manager name</label>
+                    </div>
+                    <div class="col-10">
+                        <input
+                            type="text"
+                            id=""
+                            name="managerName"
+                            placeholder="Your manager name"
+                        />
+                    </div>
                 </div>
-            </div>
-        </form>
-    </div>
-    <div class="box-2">
+            </form>
+
+        </div>
+
+        <div class="box-2">
         <center>
             <img
                 src="https://laparrillastorage.blob.core.windows.net/uploadedfiles/closing_report_logo.png"
                 alt="Pallirra logo"
             />
         </center>
-    </div>
-    <div class="clear"></div>
-    <div class="box-1">
-        <h4>Revenue</h4>
-        <table>
-            <tr>
-                <th>Revenue</th>
-                <th>Amount</th>
-            </tr>
-            <tr>
-                <td>Not Sales</td>
-                <td>$4,569.669</td>
-            </tr>
-            <tr>
-                <th>Total Revenue</th>
-                <th>$4,569.669</th>
-            </tr>
-        </table>
-    </div>
-    <div class="box-2">
-        <h4>Tips paid to bartenders</h4>
-        <table>
-            <tr>
-                <th>Number</th>
-                <th>Bartender</th>
-                <th>Tips</th>
-            </tr>
-            <tr>
-                <td>date here</td>
-                <td>date here</td>
-                <td>date here</td>
-            </tr>
-        </table>
+        </div>
     </div>
 
     <div class="clear"></div>
 
-    <div class="box-2">
+    <div class="">
+        <div class="">
+            <h4>Revenue</h4>
+            <table class="">
+                <thead>
+                    <tr>
+                        <th>Revenue</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Not Sales</td>
+                        <td>$4,569.669</td>
+                    </tr>
+                    <tr>
+                        <th>Total Revenue</th>
+                        <th>$4,569.669</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="box-left" style="float:right">
+            <h4>Tips paid to bartenders</h4>
+            <table class="">
+                <tr>
+                    <th>Number</th>
+                    <th>Bartender</th>
+                    <th>Tips</th>
+                </tr>
+                <tr>
+                    <td>date here</td>
+                    <td>date here</td>
+                    <td>date here</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="">
+    <div class="">
         <h4>Tips paid to servers</h4>
-        <table>
+        <table class="t3">
             <tr>
                 <th>Number</th>
                 <th>Server</th>
@@ -237,8 +262,8 @@
             </tr>
         </table>
     </div>
-    <div class="clear"></div>
-    <div class="box-2">
+
+    <div class="">
         <h4>Failed instant Pay Transactions</h4>
         <table>
             <tr>
@@ -253,8 +278,9 @@
             </tr>
         </table>
     </div>
-    <div class="clear"></div>
-    <div class="box-1">
+    </div>
+    <div class=""></div>
+    <div class="">
         <table>
             <tr>
                 <th>Total Credit and Gift Cards</th>
@@ -263,8 +289,8 @@
         </table>
     </div>
 
-    <div class="clear"></div>
-    <div class="box-1">
+    <!-- <div class="clear"></div> -->
+    <div class="">
         <h4>Expenses</h4>
         <table>
             <tr>
@@ -281,7 +307,7 @@
             </tr>
         </table>
     </div>
-    <div class="clear"></div>
+    <!-- <div class="clear"></div> -->
     <div class="in-put-wrap">
         <div class="in-box1">
             <h5>Aloha Deposit</h5>
@@ -306,8 +332,6 @@
                 <input type="text" id="#" />
             </div>
         </div>
-
-        <div class="clear"></div>
     </div>
 
     <div class="in-put-wrap input-container">
@@ -332,7 +356,7 @@
     <div class="row">
         <div class="">
             <h5>Reason for difference in deposit amount</h5>
-            <textarea id="w3review" name="w3review" rows="4" class="fill">
+            <textarea id="reason" name="reason" rows="4" class="fill">
           </textarea>
         </div>
     </div>

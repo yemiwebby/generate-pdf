@@ -7,7 +7,7 @@
     <title>Laravel 7 PDF Example</title>
 
     <style>
-        * {
+        /* * {
             box-sizing: border-box;
         }
 
@@ -131,7 +131,7 @@
         }
         .in-box5 {
             margin: 20px;
-        }
+        } */
     </style>
 </head>
 
